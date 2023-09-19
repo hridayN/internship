@@ -29,4 +29,8 @@ export class UserComponent implements OnInit {
       })
     });
   }
+
+  submitForm() {
+    console.log('userDetails: ', this.userForm.value);
+  }
 }
