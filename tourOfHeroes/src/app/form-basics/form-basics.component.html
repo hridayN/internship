@@ -1,0 +1,44 @@
+<form [formGroup]="UserFormGroup">
+    <div class="login">
+        <div>
+            <label for="">Contact Person: </label>
+            <input type="text" placeholder="Enter Your Name" formControlName="ContactPerson" #ContactPerson>
+        </div>
+        <div>
+            <label for="">Contact No.: </label>
+            <input type="number" placeholder="Enter Your Contact No." formControlName="ContactNumber" #ContactNumber>
+        </div>
+        <div>
+            <label for="">Company Name: </label>
+            <input type="text" placeholder="Enter Your Company Name" formControlName="CompanyName" #CompanyName>
+        </div>
+        <div class="addressDetails" formGroupName="CompanyAddress">
+            <div>
+                <label for="">Company Address:</label>
+            </div>
+            <div>
+                <div>
+                    <label for="">Line One: </label>
+                    <input type="text" placeholder="Enter Your address" formControlName="LineOne" #LineOne>
+                </div>
+                <div>
+                    <label for="">Line Two: </label>
+                    <input type="text" placeholder="Enter Your address" formControlName="LineTwo" #LineTwo>
+                </div>
+                <div>
+                    <label for="">City: </label>
+                    <input type="text" placeholder="Enter Your City" formControlName="City" #City>
+                </div>
+                <div>
+                    <label for="">State: </label>
+                    <input type="text" placeholder="Enter Your State" formControlName="State" #State>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label for="">Email: </label>
+            <input type="email" placeholder="Enter Your Email" formControlName="CompanyEmail" #CompanyEmail>
+        </div>
+        <button (click)="submitForm()">Submit</button>
+    </div>
+</form>

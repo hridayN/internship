@@ -1,0 +1,23 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: burlywood;
+    width: fit-content;
+    height: fit-content;
+}
+.login div{
+    margin-bottom: 0.75rem;
+}
+.login .addressDetails{
+    display: flex;
+    justify-content: center;
+}
+.login .addressDetails div{
+    margin-right: 0.6rem;
+}
+
+.login button{
+    border-radius: 10px;
+}

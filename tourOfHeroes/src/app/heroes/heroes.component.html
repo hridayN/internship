@@ -1,0 +1,56 @@
+<!-- selectedHero: {{selectedHero | json}} -->
+<h1>Global Services Hero: {{num}}</h1>
+<h1>Component level Services Hero: {{num1}}</h1>
+<h2>My Heroes</h2>
+<ul class="heroes" style="list-style-type: none;">
+  <li *ngFor="let hero of heroes; let i=index">
+    {{i+1}} <button type="button" (click)="heroInfo(hero.id)">{{hero.id}}</button>
+    <span> {{hero.name}}</span>
+  </li>
+</ul>
+
+<div *ngIf="flag">{{selectedName}} Seleceted with Id: {{selectedId}}</div>
+
+<!-- INPUTED DATA COMMUNICATION USING EVENT BINDING USING ID  -->
+<div>
+  <button (click)="inputNewHero=true">Add Hero</button>
+  <div *ngIf="inputNewHero">
+    <label for="">New Hero Name: </label>
+    <span><input type="text" name="newHeroName" #newHeroName></span>
+    <!-- Id of input being passed in button event listner  -->
+    <button (click)="submit(newHeroName.value)">Submit</button>
+  </div>
+</div>
+
+<div class="update">
+  <button (click)="inputUpdateHero=true">Update Hero</button>
+  <div *ngIf="inputUpdateHero">
+    <label for="">Eneter Id of Hero: </label>
+    <!-- Pattern is used for validation -->
+    <input type="number" pattern="[0-9]*" #updateHeroId>
+    <label for="">Enter new hero name: </label>
+    <input type="text" #updateHeroName>
+    <button (click)="updateSubmit(updateHeroId.value, updateHeroName.value)">Submit</button>
+  </div>
+  <div>
+
+    <div class="delete">
+      <button (click)="inputDeleteHero=true">Delete Hero</button>
+      <div *ngIf="inputDeleteHero">
+        <label for="">Enter Id of hero: </label>
+        <input type="number" #deleteHeroInfo>
+        <button (click)="deleteHero(deleteHeroInfo.value)">Submit</button>
+      </div>
+    </div>
+
+    <app-hero-details [heroId]="selectedId" (messageFromHeroDetails)="messageFromHeroChild=$event"></app-hero-details>
+    <div>{{messageFromHeroChild}}</div>
+<!-- selectedHero: {{selectedHero | json}}
+<div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div>id: {{selectedHero.id}}</div>
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+  </div> -->
