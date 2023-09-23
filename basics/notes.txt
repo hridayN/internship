@@ -9,3 +9,6 @@ Open component as a dialog box
 8. **IMPORTANT: Declare BrowserAnimationsModule before BrowserModule in the imports array in module.ts
 
 Reference: https://blog.angular-university.io/angular-material-dialog/
+
+Key Points:
+We need not establish parent-child relationship between components to share the data
