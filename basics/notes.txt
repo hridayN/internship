@@ -1,0 +1,11 @@
+Open component as a dialog box
+1. Declare a component to be open as Dialog
+2. Register this component in entryComponents array in module.ts
+3. Inject MatDialogRef of required type into it.
+4. Declare a component on which we will open dialog component- DialogParent
+5. Inject MatDialog into DialogParent component.
+6. Open dialog component onto DialogParent using MatDialog.open
+7. Run npm install @angular/animations@latest --save
+8. **IMPORTANT: Declare BrowserAnimationsModule before BrowserModule in the imports array in module.ts
+
+Reference: https://blog.angular-university.io/angular-material-dialog/

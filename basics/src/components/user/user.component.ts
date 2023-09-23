@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Address } from '../../models/address.model';
 import { User } from '../../models/user.model';
 @Component({
@@ -10,7 +11,8 @@ import { User } from '../../models/user.model';
 export class UserComponent implements OnInit {
   user: User; // STEP-6
   userForm: FormGroup; //STEP-7
-  constructor(private _fb: FormBuilder) { // STEP-2
+  constructor(private _fb: FormBuilder,
+    public dialogRef: MatDialogRef<UserComponent>) { // STEP-2
     this.user = new User();
     this.userForm = new FormGroup({});
   }
@@ -54,5 +56,10 @@ export class UserComponent implements OnInit {
     // Assign user form  details to user model
     this.user = user;
     console.log('userDetails: ', this.user);
+    this.closeDialog();
+  }
+
+  closeDialog() {
+    this.dialogRef.close(this.user);
   }
 }
