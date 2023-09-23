@@ -50,7 +50,7 @@ export class UserComponent implements OnInit {
     addressDetails.state = addressFormDetails.controls['state'].value;
     addressDetails.country = addressFormDetails.controls['country'].value;
 
-    // Assign form-address details to user
+    // Assign form-address details to user model
     user.address = addressDetails;
 
     // Assign user form  details to user model
