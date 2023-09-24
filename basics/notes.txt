@@ -8,6 +8,7 @@ Open component as a dialog box
 7. Open dialog component onto DialogParent using MatDialog.open
 8. Run npm install @angular/animations@latest --save
 9. **IMPORTANT: Declare BrowserAnimationsModule before BrowserModule in the imports array in module.ts
+10. Declare MatDialogModule into imports array of app.module
 
 Reference: https://blog.angular-university.io/angular-material-dialog/
 
