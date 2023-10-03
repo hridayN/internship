@@ -3,3 +3,4 @@ https://stackblitz.com/edit/form-array-angular?file=src%2Fapp%2Fapp.component.ts
 
 TODO: Observables vs Subjects vs Behavior Subjects
 https://javascript.plainenglish.io/eli5-observables-vs-subjects-vs-behavior-subjects-f2494f14813d
+https://itecnote.com/tecnote/r-behaviorsubject-vs-observable/
